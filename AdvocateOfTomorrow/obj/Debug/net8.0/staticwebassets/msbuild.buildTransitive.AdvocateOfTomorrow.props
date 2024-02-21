@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AdvocateOfTomorrow.props" />
+</Project>
