@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdvocateOfTomorrow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d12ee0795507306d230c6d09e1cd3d8a47ca6fe7")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdvocateOfTomorrow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdvocateOfTomorrow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

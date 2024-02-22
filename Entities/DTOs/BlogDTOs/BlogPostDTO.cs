@@ -1,6 +1,4 @@
-﻿using Entities.Concrete.Enums;
-
-namespace Entities.DTOs.BlogDTOs
+﻿namespace Entities.DTOs.BlogDTOs
 {
     public class BlogPostDTO
     {
@@ -16,8 +14,6 @@ namespace Entities.DTOs.BlogDTOs
         public DateTime UpdatedTime { get; set; }
         [BsonElement("images")]
         public virtual List<ImagePostDTO> Images { get; set; }
-        [BsonElement("blogType")]
-        public BlogTypes BlogType { get; set; }
         public BlogPostDTO()
         {
             Images = new List<ImagePostDTO>();

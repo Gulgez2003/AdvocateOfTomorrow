@@ -1,6 +1,4 @@
-﻿using Entities.Concrete.Enums;
-
-namespace Entities.Concrete
+﻿namespace Entities.Concrete
 {
     public class Blog
     {
@@ -21,8 +19,6 @@ namespace Entities.Concrete
         public virtual List<Image> Images { get; set; }
         [BsonRepresentation(BsonType.Boolean)]
         public bool IsDeleted { get; set; }
-        [BsonElement("blogType")]
-        public BlogTypes BlogType { get; set; }
         public Blog()
         {
             Images = new List<Image>();

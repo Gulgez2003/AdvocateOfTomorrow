@@ -1,29 +1,42 @@
-﻿namespace Business.Services.Concrete
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Business.Services.Concrete
 {
     public class ImageService : IImageService
     {
-        private readonly FileExtension _fileExtension;  
+        private readonly FileExtension _fileExtension;
         private readonly IImageRepository _imageRepository;
+
         public ImageService(FileExtension fileExtension, IImageRepository imageRepository)
         {
             _fileExtension = fileExtension;
             _imageRepository = imageRepository;
         }
+
         public async Task CreateAsync(ImagePostDTO postDto)
         {
-            Image image = new Image()
+            if (!_fileExtension.IsImage(postDto.File))
             {
-                Id = ObjectId.GenerateNewId(),
-                AcademicId = postDto.AcademicId,
-                AnnouncementId = postDto.AnnouncementId,
-                EventId = postDto.EventId
-            };
+                throw new BadRequestException("Uploaded file is not an image.");
+            }
 
-            string remoteImagePath = await _fileExtension.UploadImageAsync("advocateoftomorrow.appspot.com", postDto.File, "images");
+            if (!_fileExtension.IsSizeOk(postDto.File, 10)) 
+            {
+                throw new BadRequestException("File size exceeds the limit.");
+            }
 
-            image.ImagePath = remoteImagePath; 
+            List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { postDto.File }, "images");
 
-            await _imageRepository.CreateAsync(image);
+            await Task.WhenAll(remoteImagePaths.Select(async remoteImagePath =>
+            {
+                Image image = new Image()
+                {
+                    Id = ObjectId.GenerateNewId(),
+                    ImagePath = remoteImagePath
+                };
+
+                await _imageRepository.CreateAsync(image);
+            }));
         }
 
         public async Task DeleteAsync(string id)
@@ -33,9 +46,10 @@
             {
                 throw new NotFoundException(Messages.ImageNotFound);
             }
+
             image.IsDeleted = true;
 
-            _imageRepository.UpdateAsync(image);
+            await _imageRepository.UpdateAsync(image);
         }
     }
 }

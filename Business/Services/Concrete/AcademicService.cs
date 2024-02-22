@@ -1,4 +1,6 @@
-﻿namespace Business.Services.Concrete
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Business.Services.Concrete
 {
     public class AcademicService : IAcademicService
     {
@@ -27,13 +29,12 @@
             {
                 var dto = new ImagePostDTO
                 {
-                    File = imageDto.File,
-                    AcademicId = academic.Id
+                    File = imageDto.File
                 };
 
-                string remoteImagePath = await _fileExtension.UploadImageAsync("advocateoftomorrow.appspot.com", dto.File, "images");
-                await _imageService.CreateAsync(dto);
-                academic.Images.Add(new Image { AcademicId = academic.Id, ImagePath=remoteImagePath});
+                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+
+                academic.Images.AddRange(remoteImagePaths.Select(path => new Image { AcademicId = academic.Id, ImagePath = path }));
             }
             await _academicRepository.CreateAsync(academic);
         }
@@ -125,6 +126,17 @@
             academic.AuthorFullName = updateDto.BlogPostDTO.AuthorFullName;
             academic.UpdatedTime = DateTime.UtcNow;
 
+            foreach (var imageDto in updateDto.BlogPostDTO.Images)
+            {
+                var dto = new ImagePostDTO
+                {
+                    File = imageDto.File
+                };
+
+                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+
+                academic.Images.AddRange(remoteImagePaths.Select(path => new Image { AcademicId = academic.Id, ImagePath = path }));
+            }
             _academicRepository.UpdateAsync(academic);
         }
     }

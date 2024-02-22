@@ -14,3 +14,4 @@ global using Business.Services.Concrete;
 global using DataAccess.Repositories.Concrete;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.AspNetCore.Http;

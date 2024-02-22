@@ -2,19 +2,19 @@
 {
     public static void Initialize()
     {
-        string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        string serviceAccountKeyPath = "C:/Users/User/Downloads/advocateoftomorrow-firebase-adminsdk-tf8jw-08a43c06d8.json";
 
-        string relativeFilePath = "C:/Users/User/Downloads/advocateoftomorrow-firebase-adminsdk-tf8jw-08a43c06d8";
-
-        string absoluteFilePath = Path.Combine(currentDirectory, relativeFilePath);
-
-        if (File.Exists(absoluteFilePath))
+        if (File.Exists(serviceAccountKeyPath))
         {
-            var firebaseCredential = GoogleCredential.FromFile("C:/Users/User/Downloads/advocateoftomorrow-firebase-adminsdk-tf8jw-08a43c06d8.json");
-             FirebaseApp.Create(new AppOptions
+            var firebaseCredential = GoogleCredential.FromFile(serviceAccountKeyPath);
+            FirebaseApp.Create(new AppOptions
             {
                 Credential = firebaseCredential
             });
+        }
+        else
+        {
+            Console.WriteLine("JSON file is not found");
         }
     }
 }

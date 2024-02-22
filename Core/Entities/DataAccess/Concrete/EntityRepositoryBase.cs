@@ -55,11 +55,9 @@ namespace Core.Entities.DataAccess.Concrete
             return cursor;
         }
 
-        public async void UpdateAsync(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
-            var filter = Builders<TEntity>.Filter.Eq("_id", entity.Id); 
-            var update = Builders<TEntity>.Update.Set(x => x, entity); 
-            await _collection.UpdateOneAsync(filter, update);
+            await _collection.ReplaceOneAsync(Builders<TEntity>.Filter.Eq("_id", entity.Id), entity);
         }
     }
 }

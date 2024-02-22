@@ -1,4 +1,7 @@
-﻿namespace Business.Services.Concrete
+﻿using Entities.Concrete;
+using Microsoft.AspNetCore.Http;
+
+namespace Business.Services.Concrete
 {
     public class AnnouncementService : IAnnouncementService
     {
@@ -28,13 +31,12 @@
             {
                 var dto = new ImagePostDTO
                 {
-                    File = imageDto.File,
-                    AnnouncementId = announcement.Id
+                    File = imageDto.File
                 };
 
-                string remoteImagePath = await _fileExtension.UploadImageAsync("advocateoftomorrow.appspot.com", dto.File, "images");
-                await _imageService.CreateAsync(dto);
-                announcement.Images.Add(new Image { AnnouncementId = announcement.Id, ImagePath = remoteImagePath });
+                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+
+                announcement.Images.AddRange(remoteImagePaths.Select(path => new Image { AnnouncementId = announcement.Id, ImagePath = path }));
             }
 
             await _announcementRepository.CreateAsync(announcement);
@@ -125,8 +127,19 @@
             announcement.Title = updateDto.BlogPostDTO.Title;
             announcement.Description = updateDto.BlogPostDTO.Description;
             announcement.AuthorFullName = updateDto.BlogPostDTO.AuthorFullName;
-            announcement.UpdatedTime = DateTime.UtcNow; 
+            announcement.UpdatedTime = DateTime.UtcNow;
 
+            foreach (var imageDto in updateDto.BlogPostDTO.Images)
+            {
+                var dto = new ImagePostDTO
+                {
+                    File = imageDto.File
+                };
+
+                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+
+                announcement.Images.AddRange(remoteImagePaths.Select(path => new Image { AnnouncementId = announcement.Id, ImagePath = path }));
+            }
             _announcementRepository.UpdateAsync(announcement);
         }
     }

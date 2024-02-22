@@ -13,3 +13,4 @@ C:\Users\User\Desktop\AdvocateOfTomorrowApp\Entities\obj\Debug\net8.0\Entities.d
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Entities\obj\Debug\net8.0\refint\Entities.dll
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Entities\obj\Debug\net8.0\Entities.pdb
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Entities\obj\Debug\net8.0\ref\Entities.dll
+C:\Users\User\Desktop\AdvocateOfTomorrowApp\Entities\obj\Debug\net8.0\Entities.sourcelink.json

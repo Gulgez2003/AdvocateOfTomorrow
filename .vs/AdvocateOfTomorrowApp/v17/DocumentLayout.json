@@ -3,16 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\dtos\\imagedtos\\imagepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\imagedtos\\imagepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\core\\entities\\dataaccess\\abstract\\ientityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|solutionrelative:core\\entities\\dataaccess\\abstract\\ientityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\core\\entities\\dataaccess\\concrete\\entityrepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|solutionrelative:core\\entities\\dataaccess\\concrete\\entityrepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\Desktop\\RNET103\\Labs\\MongoDbApiApp\\MongoDbApi\\Repositories\\MongoRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\dtos\\blogdtos\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\blogdtos\\blogpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\concrete\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|solutionrelative:entities\\concrete\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\advocateoftomorrow\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|solutionrelative:advocateoftomorrow\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\advocateoftomorrow\\usings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|solutionrelative:advocateoftomorrow\\usings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\core\\entities\\dataaccess\\concrete\\entityrepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|solutionrelative:core\\entities\\dataaccess\\concrete\\entityrepositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\advocateoftomorrow\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,28 +42,12 @@
       "RelativeMoniker": "D:0:0:{8BB17653-2D36-4DC6-9673-AD8F081E614C}|AdvocateOfTomorrow\\AdvocateOfTomorrow.csproj|solutionrelative:advocateoftomorrow\\controllers\\announcementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\core\\entities\\dataaccess\\abstract\\ientityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|solutionrelative:core\\entities\\dataaccess\\abstract\\ientityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\core\\entities\\concrete\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25018BE5-72A8-40A3-9ED3-8C6F95BB16CF}|Core\\Core.csproj|solutionrelative:core\\entities\\concrete\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\business\\services\\concrete\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\business\\services\\concrete\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\business\\services\\concrete\\announcementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\announcementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\business\\services\\concrete\\academicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\academicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8802469B-6445-4C1E-8591-DA1018773F55}|Business\\Business.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\business\\services\\concrete\\aboutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +56,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\dtos\\contactdtos\\contactupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\contactdtos\\contactupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\dtos\\blogdtos\\blogupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|solutionrelative:entities\\dtos\\blogdtos\\blogupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BC97CB0-50D7-4BEC-8AC9-45AD37E43A0C}|Entities\\Entities.csproj|c:\\users\\user\\desktop\\advocateoftomorrowapp\\entities\\dtos\\aboutdtos\\aboutupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,29 +108,33 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Usings.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Usings.cs",
-              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Usings.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Usings.cs",
-              "RelativeToolTip": "AdvocateOfTomorrow\\Usings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T18:22:08.021Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Controllers\\BlogController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "AdvocateOfTomorrow\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA1AAAA",
+              "Title": "ImagePostDTO.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\ImageDTOs\\ImagePostDTO.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\ImageDTOs\\ImagePostDTO.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\ImageDTOs\\ImagePostDTO.cs",
+              "RelativeToolTip": "Entities\\DTOs\\ImageDTOs\\ImagePostDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:42:27.631Z",
+              "WhenOpened": "2024-02-22T07:53:20.043Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IEntityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
+              "RelativeToolTip": "Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T17:04:32.22Z"
             },
             {
               "$type": "Document",
@@ -141,37 +144,61 @@
               "RelativeDocumentMoniker": "Core\\Entities\\DataAccess\\Concrete\\EntityRepositoryBase.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\DataAccess\\Concrete\\EntityRepositoryBase.cs",
               "RelativeToolTip": "Core\\Entities\\DataAccess\\Concrete\\EntityRepositoryBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAADkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T09:19:32.198Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ContactController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\ContactController.cs",
-              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Controllers\\ContactController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\ContactController.cs",
-              "RelativeToolTip": "AdvocateOfTomorrow\\Controllers\\ContactController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA5AAAA",
+              "Title": "MongoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\RNET103\\Labs\\MongoDbApiApp\\MongoDbApi\\Repositories\\MongoRepository.cs",
+              "RelativeDocumentMoniker": "..\\RNET103\\Labs\\MongoDbApiApp\\MongoDbApi\\Repositories\\MongoRepository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\RNET103\\Labs\\MongoDbApiApp\\MongoDbApi\\Repositories\\MongoRepository.cs",
+              "RelativeToolTip": "..\\RNET103\\Labs\\MongoDbApiApp\\MongoDbApi\\Repositories\\MongoRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:47:03.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IEntityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
-              "RelativeDocumentMoniker": "Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
-              "RelativeToolTip": "Core\\Entities\\DataAccess\\Abstract\\IEntityRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:04:32.22Z"
+              "WhenOpened": "2024-02-22T07:36:47.335Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "BlogPostDTO.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\BlogDTOs\\BlogPostDTO.cs",
+              "RelativeDocumentMoniker": "Entities\\DTOs\\BlogDTOs\\BlogPostDTO.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\BlogDTOs\\BlogPostDTO.cs",
+              "RelativeToolTip": "Entities\\DTOs\\BlogDTOs\\BlogPostDTO.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T07:00:09.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Blog.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\Concrete\\Blog.cs",
+              "RelativeDocumentMoniker": "Entities\\Concrete\\Blog.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\Concrete\\Blog.cs",
+              "RelativeToolTip": "Entities\\Concrete\\Blog.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T06:59:46.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "AdvocateOfTomorrow\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T17:42:27.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AnnouncementsController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\AnnouncementsController.cs",
               "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Controllers\\AnnouncementsController.cs",
@@ -183,19 +210,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\EventService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\EventService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\EventService.cs",
-              "RelativeToolTip": "Business\\Services\\Concrete\\EventService.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAAAHMAAABOAAAA",
+              "DocumentIndex": 8,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "AdvocateOfTomorrow\\Controllers\\ContactController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:01:26.722Z"
+              "WhenOpened": "2024-02-21T17:47:03.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
+              "Title": "Usings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Usings.cs",
+              "RelativeDocumentMoniker": "AdvocateOfTomorrow\\Usings.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\AdvocateOfTomorrow\\Usings.cs",
+              "RelativeToolTip": "AdvocateOfTomorrow\\Usings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T18:22:08.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "ContactService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\ContactService.cs",
               "RelativeDocumentMoniker": "Business\\Services\\Concrete\\ContactService.cs",
@@ -207,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Core\\Entities\\Concrete\\User.cs",
               "RelativeDocumentMoniker": "Core\\Entities\\Concrete\\User.cs",
@@ -219,31 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AnnouncementService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\AnnouncementService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\AnnouncementService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\AnnouncementService.cs",
-              "RelativeToolTip": "Business\\Services\\Concrete\\AnnouncementService.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAH0AAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:00:13.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AcademicService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\AcademicService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\AcademicService.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\AcademicService.cs",
-              "RelativeToolTip": "Business\\Services\\Concrete\\AcademicService.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:58:36.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ContactUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\ContactDTOs\\ContactUpdateDTO.cs",
               "RelativeDocumentMoniker": "Entities\\DTOs\\ContactDTOs\\ContactUpdateDTO.cs",
@@ -255,19 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BlogUpdateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\BlogDTOs\\BlogUpdateDTO.cs",
-              "RelativeDocumentMoniker": "Entities\\DTOs\\BlogDTOs\\BlogUpdateDTO.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Entities\\DTOs\\BlogDTOs\\BlogUpdateDTO.cs",
-              "RelativeToolTip": "Entities\\DTOs\\BlogDTOs\\BlogUpdateDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T16:57:29.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AboutService.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\AdvocateOfTomorrowApp\\Business\\Services\\Concrete\\AboutService.cs",
               "RelativeDocumentMoniker": "Business\\Services\\Concrete\\AboutService.cs",
@@ -312,10 +315,6 @@
               "ViewState": "AQIAAAEAAAAAAAAAAAAAwAIAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T09:20:02.343Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

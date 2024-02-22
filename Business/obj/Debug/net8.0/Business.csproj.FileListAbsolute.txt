@@ -17,3 +17,4 @@ C:\Users\User\Desktop\AdvocateOfTomorrowApp\Business\obj\Debug\net8.0\Business.d
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Business\obj\Debug\net8.0\refint\Business.dll
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Business\obj\Debug\net8.0\Business.pdb
 C:\Users\User\Desktop\AdvocateOfTomorrowApp\Business\obj\Debug\net8.0\ref\Business.dll
+C:\Users\User\Desktop\AdvocateOfTomorrowApp\Business\obj\Debug\net8.0\Business.sourcelink.json

@@ -8,7 +8,7 @@
         Task<TEntity> GetIncludingAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includes);
         IEnumerable<TEntity> GetAllIncluding(int pageNumber, int take, Expression<Func<TEntity, object>>[] includeProperties);
         Task CreateAsync(TEntity entity);
-        void UpdateAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
         void DeleteAsync(string id);
     }
 }
