@@ -3,7 +3,6 @@
     public class AboutService : IAboutService
     {
         private readonly IAboutRepository _aboutRepository;
-
         public AboutService(IAboutRepository aboutRepository)
         {
             _aboutRepository = aboutRepository;
@@ -11,7 +10,7 @@
 
         public async Task CreateAsync(AboutPostDTO postDto)
         {
-            About about = new About()
+            About about = new ()
             {
                 Id = ObjectId.GenerateNewId(),
                 Title = postDto.Title,
@@ -29,7 +28,7 @@
             }
             about.IsDeleted = true;
 
-            _aboutRepository.UpdateAsync(about);
+            await _aboutRepository.UpdateAsync(about);
         }
 
         public async Task<List<AboutGetDTO>> GetAllAsync()
@@ -76,7 +75,7 @@
             about.Title = updateDto.AboutPostDTO.Title;
             about.Description = updateDto.AboutPostDTO.Description;
 
-            _aboutRepository.UpdateAsync(about);
+            await _aboutRepository.UpdateAsync(about);
         }
     }
 }

@@ -4,22 +4,25 @@
     {
         private readonly IEventRepository _eventRepository;
         private readonly IImageService _imageService;
-        private readonly FileExtension _fileExtension;
-        public EventService(IEventRepository eventRepository, IImageService imageService, FileExtension fileExtension)
+        private readonly IUserService _userService;
+        public EventService(IEventRepository eventRepository, IImageService imageService, IUserService userService)
         {
             _eventRepository = eventRepository;
             _imageService = imageService;
-            _fileExtension = fileExtension;
+            _userService = userService;
         }
         public async Task CreateAsync(BlogPostDTO postDto)
         {
-            Event _event = new Event()
+            string authorFullName = await _userService.GetCurrentUserName();
+
+            Event _event = new ()
             {
                 Id = ObjectId.GenerateNewId(),
                 Title = postDto.Title,
                 Description = postDto.Description,
-                AuthorFullName = postDto.AuthorFullName,
-                CreatedTime = DateTime.UtcNow
+                AuthorFullName = authorFullName,
+                CreatedTime = DateTime.UtcNow,
+                Images= new List<Image>()
             };
 
             foreach (var imageDto in postDto.Images)
@@ -29,8 +32,15 @@
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
-                _event.Images.AddRange(remoteImagePaths.Select(path => new Image { EventId = _event.Id, ImagePath = path }));
+                string imagePath = await _imageService.CreateAsync(dto);
+
+                Image image = new()
+                {
+                    ImagePath = imagePath,
+                    EventId = _event.Id
+                };
+
+                _event.Images.Add(image);
             }
 
             await _eventRepository.CreateAsync(_event);
@@ -46,7 +56,7 @@
 
             _event.IsDeleted = true;
 
-            _eventRepository.UpdateAsync(_event);
+            await _eventRepository.UpdateAsync(_event);
         }
 
         public async Task<List<BlogGetDTO>> GetAll()
@@ -120,8 +130,8 @@
 
             _event.Title = updateDto.BlogPostDTO.Title;
             _event.Description = updateDto.BlogPostDTO.Description;
-            _event.AuthorFullName = updateDto.BlogPostDTO.AuthorFullName;
             _event.UpdatedTime = DateTime.UtcNow;
+            _event.Images = new List<Image>();
 
             foreach (var imageDto in updateDto.BlogPostDTO.Images)
             {
@@ -130,11 +140,18 @@
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+                string imagePath = await _imageService.CreateAsync(dto);
 
-                _event.Images.AddRange(remoteImagePaths.Select(path => new Image { EventId = _event.Id, ImagePath = path }));
+                Image image = new()
+                {
+                    ImagePath = imagePath,
+                    EventId = _event.Id
+                };
+
+                _event.Images.Add(image);
             }
-            _eventRepository.UpdateAsync(_event);
+
+            await _eventRepository.UpdateAsync(_event);
         }
     }
 }

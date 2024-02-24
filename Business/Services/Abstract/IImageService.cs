@@ -2,7 +2,7 @@
 {
     public interface IImageService
     {
-        Task CreateAsync(ImagePostDTO postDto);
+        Task<string> CreateAsync(ImagePostDTO postDto);
         Task DeleteAsync(string id);
     }
 }

@@ -6,3 +6,7 @@ global using Entities.DTOs.BlogDTOs;
 global using Entities.DTOs.ContactDTOs;
 global using Entities.Concrete;
 global using Core.Entities.DataAccess.Abstract;
+global using Core.Entities.DTOs;
+global using Microsoft.AspNetCore.Authorization;
+global using Business.Utilities.Validators;
+global using FluentValidation.Results;

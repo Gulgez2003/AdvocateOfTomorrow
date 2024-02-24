@@ -11,5 +11,7 @@
         public string Description { get; set; }
         [BsonRepresentation(BsonType.Boolean)]
         public bool IsDeleted { get; set; }
+        [BsonRepresentation(BsonType.String)]
+        public string AuthorFullName { get; set; }
     }
 }

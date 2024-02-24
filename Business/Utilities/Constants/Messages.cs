@@ -8,5 +8,6 @@
         public static string EventNotFound = "Event not found";
         public static string ContactNotFound = "Contact not found";
         public static string ImageNotFound = "Image not found";
+        public static string UserNotFound = "User not found";
     }
 }

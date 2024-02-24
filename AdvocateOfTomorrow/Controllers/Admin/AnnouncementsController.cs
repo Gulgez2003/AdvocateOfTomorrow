@@ -1,6 +1,7 @@
-﻿namespace AdvocateOfTomorrow.Controllers
+﻿namespace AdvocateOfTomorrow.Controllers.Admin
 {
-    [Route("api/[controller]")]
+    [Authorize]
+    [Route("api/announcement")]
     [ApiController]
     public class AnnouncementsController : ControllerBase
     {
@@ -12,7 +13,7 @@
         }
 
         // GET: api/<AnnouncementsController>
-        [HttpGet]
+        [HttpGet("getAllAnnouncements/{pageNumber}")]
         public async Task<IActionResult> GetAllAnnouncements(int pageNumber)
         {
             List<BlogGetDTO> announcements = await _announcementService.GetAllAsync(pageNumber);
@@ -20,7 +21,7 @@
         }
 
         // GET api/<AnnouncementsController>/5
-        [HttpGet("{id}")]
+        [HttpGet("getAnnouncementById/{id}")]
         public async Task<IActionResult> GetAnnouncementById(string id)
         {
             BlogGetDTO announcementGetDTO = await _announcementService.GetByIdAsync(id);
@@ -28,27 +29,54 @@
         }
 
         // POST api/<AnnouncementsController>
-        [HttpPost]
+        [HttpPost("postAnnouncement")]
         public async Task<IActionResult> PostAnnouncement(BlogPostDTO postDTO)
         {
-            _announcementService.CreateAsync(postDTO);
-            return Ok(postDTO);
+            BlogPostDTOValidator validations = new BlogPostDTOValidator();
+            ValidationResult validationResult = await validations.ValidateAsync(postDTO);
+            if (validationResult.IsValid)
+            {
+                _announcementService.CreateAsync(postDTO);
+                return Ok(postDTO);
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError("", item.ErrorMessage);
+                }
+                return BadRequest(ModelState);
+            }
         }
 
         // PUT api/<AnnouncementsController>/5
-        [HttpPut("{id}")]
+        [HttpPut("updateAnnouncement/{id}")]
         public async Task<IActionResult> UpdateAnnouncement(string id, BlogUpdateDTO updateDTO)
         {
             if (id != updateDTO.Id.ToString())
             {
                 return BadRequest("Invalid id provided in the request body");
             }
-            await _announcementService.UpdateAsync(updateDTO);
-            return Ok();
+
+            BlogPostDTOValidator validations = new BlogPostDTOValidator();
+            ValidationResult validationResult = await validations.ValidateAsync(updateDTO.BlogPostDTO);
+            if (validationResult.IsValid)
+            {
+                await _announcementService.UpdateAsync(updateDTO);
+                return Ok();
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError("", item.ErrorMessage);
+                }
+                return BadRequest(ModelState);
+            }
         }
 
         // DELETE api/<AnnouncementsController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("removeAnnouncement/{id}")]
         public async Task<IActionResult> RemoveAnnouncement(string id)
         {
             await _announcementService.DeleteAsync(id);

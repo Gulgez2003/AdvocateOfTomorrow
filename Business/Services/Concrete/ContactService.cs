@@ -36,7 +36,7 @@
             contact.Title = updateDto.Title;
             contact.ContactInformation = updateDto.ContactInformation;
 
-            _contactRepository.UpdateAsync(contact);
+            await _contactRepository.UpdateAsync(contact);
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿namespace YourNamespace.Controllers
+﻿namespace AdvocateOfTomorrow.Controllers.Client
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/client/blog")]
     public class BlogController : ControllerBase
     {
         private readonly IEntityRepository<Academic> _academicRepository;
@@ -31,8 +31,8 @@
                     .Concat(eventsBlogs)
                     .Concat(announcementsBlogs)
                     .OrderByDescending(x => x.CreatedTime)
-                    .Skip((pageNumber - 1) * 10) 
-                    .Take(10) 
+                    .Skip((pageNumber - 1) * 10)
+                    .Take(10)
                     .ToList();
 
                 return Ok(allBlogs);

@@ -7,5 +7,7 @@ global using Microsoft.Extensions.Configuration;
 global using MongoDB.Driver;
 global using FirebaseAdmin;
 global using Google.Apis.Auth.OAuth2;
+global using MongoDB.Bson;
+global using MongoDB.Bson.Serialization.Attributes;
 
 

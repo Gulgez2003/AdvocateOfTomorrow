@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace Entities.DTOs.ImageDTOs
+﻿namespace Entities.DTOs.ImageDTOs
 {
     public class ImagePostDTO
     {

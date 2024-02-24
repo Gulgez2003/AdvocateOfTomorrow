@@ -1,6 +1,4 @@
-﻿using MongoDB.Driver;
-
-namespace Core.Entities.DataAccess.Concrete
+﻿namespace Core.Entities.DataAccess.Concrete
 {
     public class EntityRepositoryBase<TEntity> : IEntityRepository<TEntity>
         where TEntity : class, IEntity, new()

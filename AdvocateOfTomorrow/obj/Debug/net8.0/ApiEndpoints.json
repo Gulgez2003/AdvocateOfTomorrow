@@ -1,34 +1,8 @@
 [
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AboutController",
-    "Method": "GetAbouts",
-    "RelativePath": "api/About",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AboutController",
-    "Method": "PostAbout",
-    "RelativePath": "api/About",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "postDTO",
-        "Type": "Entities.DTOs.AboutDTOs.AboutPostDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AboutController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AboutController",
     "Method": "GetAboutById",
-    "RelativePath": "api/About/{id}",
+    "RelativePath": "api/about/getAboutById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +16,51 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AboutController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AboutController",
+    "Method": "GetAbouts",
+    "RelativePath": "api/about/getAbouts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AboutController",
+    "Method": "PostAbout",
+    "RelativePath": "api/about/postAbout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postDTO",
+        "Type": "Entities.DTOs.AboutDTOs.AboutPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AboutController",
+    "Method": "RemoveAbout",
+    "RelativePath": "api/about/removeAbout/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AboutController",
     "Method": "UpdateAbout",
-    "RelativePath": "api/About/{id}",
+    "RelativePath": "api/about/updateAbout/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,57 +79,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AboutController",
-    "Method": "RemoveAbout",
-    "RelativePath": "api/About/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AcademicController",
-    "Method": "GetAllAcademicPerformances",
-    "RelativePath": "api/Academic",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AcademicController",
-    "Method": "PostAcademicPerformance",
-    "RelativePath": "api/Academic",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "postDTO",
-        "Type": "Entities.DTOs.BlogDTOs.BlogPostDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AcademicController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AcademicController",
     "Method": "GetAcademicPerformanceById",
-    "RelativePath": "api/Academic/{id}",
+    "RelativePath": "api/academic/getAcademicPerformanceById/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -127,46 +95,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AcademicController",
-    "Method": "UpdateAcademicPerformance",
-    "RelativePath": "api/Academic/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "updateDTO",
-        "Type": "Entities.DTOs.BlogDTOs.BlogUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AcademicController",
-    "Method": "RemoveAcademicPerformance",
-    "RelativePath": "api/Academic/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AnnouncementsController",
-    "Method": "GetAllAnnouncements",
-    "RelativePath": "api/Announcements",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AcademicController",
+    "Method": "GetAllAcademicPerformances",
+    "RelativePath": "api/academic/getAllAcademicPerformances/{pageNumber}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -174,15 +105,15 @@
       {
         "Name": "pageNumber",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AnnouncementsController",
-    "Method": "PostAnnouncement",
-    "RelativePath": "api/Announcements",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AcademicController",
+    "Method": "PostAcademicPerformance",
+    "RelativePath": "api/academic/postAcademicPerformance",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -196,10 +127,10 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AnnouncementsController",
-    "Method": "GetAnnouncementById",
-    "RelativePath": "api/Announcements/{id}",
-    "HttpMethod": "GET",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AcademicController",
+    "Method": "RemoveAcademicPerformance",
+    "RelativePath": "api/academic/removeAcademicPerformance/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -212,9 +143,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AnnouncementsController",
-    "Method": "UpdateAnnouncement",
-    "RelativePath": "api/Announcements/{id}",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AcademicController",
+    "Method": "UpdateAcademicPerformance",
+    "RelativePath": "api/academic/updateAcademicPerformance/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -233,25 +164,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.AnnouncementsController",
-    "Method": "RemoveAnnouncement",
-    "RelativePath": "api/Announcements/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "YourNamespace.Controllers.BlogController",
-    "Method": "GetAllBlogs",
-    "RelativePath": "api/Blog/getAllBlogs/{pageNumber}",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AnnouncementsController",
+    "Method": "GetAllAnnouncements",
+    "RelativePath": "api/announcement/getAllAnnouncements/{pageNumber}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -265,9 +180,142 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.ContactController",
-    "Method": "GetAllContacts",
-    "RelativePath": "api/Contact",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AnnouncementsController",
+    "Method": "GetAnnouncementById",
+    "RelativePath": "api/announcement/getAnnouncementById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AnnouncementsController",
+    "Method": "PostAnnouncement",
+    "RelativePath": "api/announcement/postAnnouncement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postDTO",
+        "Type": "Entities.DTOs.BlogDTOs.BlogPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AnnouncementsController",
+    "Method": "RemoveAnnouncement",
+    "RelativePath": "api/announcement/removeAnnouncement/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AnnouncementsController",
+    "Method": "UpdateAnnouncement",
+    "RelativePath": "api/announcement/updateAnnouncement/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDTO",
+        "Type": "Entities.DTOs.BlogDTOs.BlogUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AuthController",
+    "Method": "ConfirmAdmin",
+    "RelativePath": "api/auth/confirmAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/loginAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "Core.Entities.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/auth/registerAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDTO",
+        "Type": "Core.Entities.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.BlogController",
+    "Method": "GetAllBlogs",
+    "RelativePath": "api/blog/getAllBlogs/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.AboutController",
+    "Method": "GetAbouts",
+    "RelativePath": "api/client/about/getAbouts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -275,9 +323,93 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.ContactController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.AcademicController",
+    "Method": "GetAllAcademicPerformances",
+    "RelativePath": "api/client/academic/getAllAcademicPerformances/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.AnnouncementsController",
+    "Method": "GetAllAnnouncements",
+    "RelativePath": "api/client/announcement/getAllAnnouncements/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.BlogController",
+    "Method": "GetAllBlogs",
+    "RelativePath": "api/client/blog/getAllBlogs/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.ContactController",
+    "Method": "GetAllContacts",
+    "RelativePath": "api/client/contact/getContact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Client.EventsController",
+    "Method": "GetAllEvents",
+    "RelativePath": "api/client/event/getAllEvents/{pageNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.ContactController",
+    "Method": "GetAllContacts",
+    "RelativePath": "api/contact/getContact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.ContactController",
     "Method": "UpdateContact",
-    "RelativePath": "api/Contact/{id}",
+    "RelativePath": "api/contact/updateContact/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -296,9 +428,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.EventsController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.EventsController",
     "Method": "GetAllEvents",
-    "RelativePath": "api/Events",
+    "RelativePath": "api/event/getAllEvents/{pageNumber}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -306,15 +438,31 @@
       {
         "Name": "pageNumber",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.EventsController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.EventsController",
+    "Method": "GetEventById",
+    "RelativePath": "api/event/getEventById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.EventsController",
     "Method": "PostEvent",
-    "RelativePath": "api/Events",
+    "RelativePath": "api/event/postEvent",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -328,10 +476,10 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.EventsController",
-    "Method": "GetEventById",
-    "RelativePath": "api/Events/{id}",
-    "HttpMethod": "GET",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.EventsController",
+    "Method": "RemoveEvent",
+    "RelativePath": "api/event/removeEvent/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -344,9 +492,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.EventsController",
+    "ContainingType": "AdvocateOfTomorrow.Controllers.Admin.EventsController",
     "Method": "UpdateEvent",
-    "RelativePath": "api/Events/{id}",
+    "RelativePath": "api/event/updateEvent/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -359,22 +507,6 @@
       {
         "Name": "updateDTO",
         "Type": "Entities.DTOs.BlogDTOs.BlogUpdateDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdvocateOfTomorrow.Controllers.EventsController",
-    "Method": "RemoveEvent",
-    "RelativePath": "api/Events/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

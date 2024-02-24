@@ -1,28 +1,29 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace Business.Services.Concrete
+﻿namespace Business.Services.Concrete
 {
     public class AcademicService : IAcademicService
     {
         private readonly IAcademicRepository _academicRepository;
         private readonly IImageService _imageService;
-        private readonly FileExtension _fileExtension;
-        public AcademicService(IAcademicRepository academicRepository, IImageService imageService, FileExtension fileExtension)
+        private readonly IUserService _userService;
+        public AcademicService(IAcademicRepository academicRepository, IImageService imageService, IUserService userService)
         {
             _academicRepository = academicRepository;
             _imageService = imageService;
-            _fileExtension = fileExtension;
+            _userService = userService;
         }
 
         public async Task CreateAsync(BlogPostDTO postDto)
         {
-            Academic academic = new Academic()
+            string authorFullName = await _userService.GetCurrentUserName();
+
+            Academic academic = new()
             {
                 Id = ObjectId.GenerateNewId(),
                 Title = postDto.Title,
                 Description = postDto.Description,
-                AuthorFullName = postDto.AuthorFullName,
-                CreatedTime = DateTime.UtcNow
+                AuthorFullName = authorFullName,
+                CreatedTime = DateTime.UtcNow,
+                Images = new List<Image>()
             };
 
             foreach (var imageDto in postDto.Images)
@@ -32,10 +33,17 @@ namespace Business.Services.Concrete
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+                string imagePath = await _imageService.CreateAsync(dto);
 
-                academic.Images.AddRange(remoteImagePaths.Select(path => new Image { AcademicId = academic.Id, ImagePath = path }));
+                Image image = new()
+                {
+                    ImagePath = imagePath,
+                    AcademicId = academic.Id
+                };
+
+                academic.Images.Add(image);
             }
+
             await _academicRepository.CreateAsync(academic);
         }
 
@@ -49,7 +57,7 @@ namespace Business.Services.Concrete
 
             academic.IsDeleted = true;
 
-            _academicRepository.UpdateAsync(academic);
+            await _academicRepository.UpdateAsync(academic);
         }
 
         public async Task<List<BlogGetDTO>> GetAll()
@@ -123,8 +131,8 @@ namespace Business.Services.Concrete
 
             academic.Title = updateDto.BlogPostDTO.Title;
             academic.Description = updateDto.BlogPostDTO.Description;
-            academic.AuthorFullName = updateDto.BlogPostDTO.AuthorFullName;
             academic.UpdatedTime = DateTime.UtcNow;
+            academic.Images = new List<Image>();
 
             foreach (var imageDto in updateDto.BlogPostDTO.Images)
             {
@@ -133,11 +141,18 @@ namespace Business.Services.Concrete
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+                string imagePath = await _imageService.CreateAsync(dto);
 
-                academic.Images.AddRange(remoteImagePaths.Select(path => new Image { AcademicId = academic.Id, ImagePath = path }));
+                Image image = new()
+                {
+                    ImagePath = imagePath,
+                    AcademicId = academic.Id
+                };
+
+                academic.Images.Add(image);
             }
-            _academicRepository.UpdateAsync(academic);
+
+            await _academicRepository.UpdateAsync(academic);
         }
     }
 }

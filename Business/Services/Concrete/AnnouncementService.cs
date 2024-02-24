@@ -1,30 +1,29 @@
-﻿using Entities.Concrete;
-using Microsoft.AspNetCore.Http;
-
-namespace Business.Services.Concrete
+﻿namespace Business.Services.Concrete
 {
     public class AnnouncementService : IAnnouncementService
     {
         private readonly IAnnouncementRepository _announcementRepository;
         private readonly IImageService _imageService;
-        private readonly FileExtension _fileExtension;
-
-        public AnnouncementService(FileExtension fileExtension, IImageService imageService, IAnnouncementRepository announcementRepository)
+        private readonly IUserService _userService;
+        public AnnouncementService(IImageService imageService, IAnnouncementRepository announcementRepository, IUserService userService)
         {
-            _fileExtension = fileExtension;
             _imageService = imageService;
             _announcementRepository = announcementRepository;
+            _userService = userService;
         }
 
         public async Task CreateAsync(BlogPostDTO postDto)
         {
+            string authorFullName = await _userService.GetCurrentUserName();
+
             Announcement announcement = new Announcement()
             {
                 Id = ObjectId.GenerateNewId(),
                 Title = postDto.Title,
                 Description = postDto.Description,
-                AuthorFullName = postDto.AuthorFullName,
-                CreatedTime = DateTime.UtcNow
+                AuthorFullName = authorFullName,
+                CreatedTime = DateTime.UtcNow,
+                Images = new List<Image>()
             };
 
             foreach (var imageDto in postDto.Images)
@@ -34,9 +33,15 @@ namespace Business.Services.Concrete
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+                string imagePath = await _imageService.CreateAsync(dto);
 
-                announcement.Images.AddRange(remoteImagePaths.Select(path => new Image { AnnouncementId = announcement.Id, ImagePath = path }));
+                Image image = new ()
+                {
+                    ImagePath = imagePath,
+                    AnnouncementId = announcement.Id
+                };
+
+                announcement.Images.Add(image);
             }
 
             await _announcementRepository.CreateAsync(announcement);
@@ -52,7 +57,7 @@ namespace Business.Services.Concrete
 
             announcement.IsDeleted = true;
 
-            _announcementRepository.UpdateAsync(announcement);
+            await _announcementRepository.UpdateAsync(announcement);
         }
 
         public async Task<List<BlogGetDTO>> GetAll()
@@ -126,8 +131,8 @@ namespace Business.Services.Concrete
 
             announcement.Title = updateDto.BlogPostDTO.Title;
             announcement.Description = updateDto.BlogPostDTO.Description;
-            announcement.AuthorFullName = updateDto.BlogPostDTO.AuthorFullName;
             announcement.UpdatedTime = DateTime.UtcNow;
+            announcement.Images = new List<Image>();
 
             foreach (var imageDto in updateDto.BlogPostDTO.Images)
             {
@@ -136,11 +141,18 @@ namespace Business.Services.Concrete
                     File = imageDto.File
                 };
 
-                List<string> remoteImagePaths = await _fileExtension.UploadImagesAsync("advocateoftomorrow.appspot.com", new List<IFormFile> { dto.File }, "images");
+                string imagePath = await _imageService.CreateAsync(dto);
 
-                announcement.Images.AddRange(remoteImagePaths.Select(path => new Image { AnnouncementId = announcement.Id, ImagePath = path }));
+                Image image = new()
+                {
+                    ImagePath = imagePath,
+                    AnnouncementId = announcement.Id
+                };
+
+                announcement.Images.Add(image);
             }
-            _announcementRepository.UpdateAsync(announcement);
+
+            await _announcementRepository.UpdateAsync(announcement);
         }
     }
 }
